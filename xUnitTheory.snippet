@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>xUnit Theory Method</Title>
+            <Shortcut>xTheory</Shortcut>
+            <Description>Code snippet for creating a Test Method with xUnit</Description>
+            <Author>Chris JG</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>ExpectedBehavior</ID>
+                    <ToolTip>What the outcome of the test should be</ToolTip>
+                    <Default>ExpectedBehavior</Default>
+                </Literal>
+                <Literal>
+                    <ID>StateUnderTest</ID>
+                    <ToolTip>Valid or invalid or null,...</ToolTip>
+                    <Default>StateUnderTest</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp"><![CDATA[[Theory]
+            [InlineData("param1_data", "param2_data")]
+            [InlineData("param1_data2", "param2_data2")]
+            public void $ExpectedBehavior$_$StateUnderTest$(string param1, string param2)
+            {
+                //Arrange.
+
+                //Act.
+
+                //Assert.
+                Assert.True(false);
+            }
+            $end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

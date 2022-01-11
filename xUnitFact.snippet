@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>xUnit Fact Method</Title>
+            <Shortcut>xFact</Shortcut>
+            <Description>Code snippet for creating a Test Method with xUnit for P10</Description>
+            <Author>Chris JG</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>ExpectedBehavior</ID>
+                    <ToolTip>What the outcome of the test should be</ToolTip>
+                    <Default>ExpectedBehavior</Default>
+                </Literal>
+                <Literal>
+                    <ID>StateUnderTest</ID>
+                    <ToolTip>Valid or invalid or null,...</ToolTip>
+                    <Default>StateUnderTest</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp"><![CDATA[[Fact]
+            public void $ExpectedBehavior$_$StateUnderTest$()
+            {
+                //Arrange.
+
+                //Act.
+
+                //Assert.
+                Assert.True(false);
+            }
+            $end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
